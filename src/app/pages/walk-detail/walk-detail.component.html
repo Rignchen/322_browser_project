@@ -1,1 +1,27 @@
-balade: {{walk.name}}
+<span (click)="location.back()">Revenir en arrière</span>
+
+<img src="{{walk.image_url}}" alt="{{walk.name}}">
+
+<h1>{{walk.name}}</h1>
+<p>{{walk.description}}</p>
+
+<div>
+	Durée
+	{{walk.duration}} h
+</div>
+<div>
+	Distance
+	{{walk.distance_km}} km
+</div>
+<div>
+	Terrain
+	{{walk.terrain}}
+</div>
+<div>
+	Dénivelé
+	{{walk.elevation_gain_m}} m
+</div>
+
+<iframe src="https://google.com/maps/embeded/{{walk.map_url}}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<a href="{{walk.map_url}}">Ouvrir dans Maps</a>
+
