@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import Walk from '../../../types/walk'
 
 @Component({
   selector: 'app-walk-detail',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './walk-detail.component.scss'
 })
 export class WalkDetailComponent {
-  public id!: number;
+  public walk: Walk = new Walk();
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class WalkDetailComponent {
       if (!/^\d+$/.test(id)) {
         throw new Error('Invalid id');
       }
-      this.id = parseInt(id);
+      this.walk.fromID(parseInt(id));
     });
   }
 }
