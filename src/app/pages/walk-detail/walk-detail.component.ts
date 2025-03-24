@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import Walk from '../../../types/walk';
-import { BackButtonComponent } from '../../components/back-button/back-button.component';
+import Walk from '#types/walk.js';
+import { BackButtonComponent } from '#components/back-button/back-button.component.js';
 
 @Component({
 	selector: 'app-walk-detail',
