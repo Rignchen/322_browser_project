@@ -2,6 +2,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 
   span {
     font-family: Roboto;
@@ -11,5 +12,8 @@
     letter-spacing: 0.5px;
     text-align: center;
     vertical-align: middle;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
