@@ -4,6 +4,11 @@ on:
   pull_request:
   push:
 
+# Only one workflow per branch
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.ref }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
